@@ -20,7 +20,7 @@ class UserRead(BaseModel):
     email: EmailStr
     role_id: Optional[uuid.UUID]
     role_name: Optional[str] = None
-
+ 
     class Config:
         orm_mode = True
 
