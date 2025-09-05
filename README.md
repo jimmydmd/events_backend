@@ -107,3 +107,11 @@ Los reportes HTML se generan en htmlcov/:
 ```bash
 open htmlcov/index.html
 ```
+
+## Probar la API con Postman
+
+Se incluye una coleccion de Postman para probar los endpoints del backend.
+
+1. Abrir Postman
+2. Importar la coleccion desde `rest/events.coleccion.json`
+3. Ejecutar los endpoints

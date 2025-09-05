@@ -1,0 +1,762 @@
+{
+	"info": {
+		"_postman_id": "5c42a46f-245d-46df-8f82-699f4e2e1f44",
+		"name": "Eventos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15367522"
+	},
+	"item": [
+		{
+			"name": "events",
+			"item": [
+				{
+					"name": "Get events",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyYjQ2MjNmOC1lNmQ5LTRmODAtOWRiNC1mMWY5NmM1MGFiZjkiLCJleHAiOjE3NTcwMTc3MjZ9.xHYc33CE0i7HAsTD0SZW6awznaVvmxukbqwIB640Lw8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create events",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkN2YyNDkxOS0yY2JmLTRkZjItYjI1Mi00OTAzMWEzYTllZWEiLCJleHAiOjE3NTY5NjIyNjV9.8hKAj4pGqHE8I53hE7gwTTYFj3B2FiMEfLHoMRBjJbA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"evento uno\",\n    \"description\": \"descrop\",\n    \"start_date\": \"2025-09-02 10:00:01\",\n    \"end_date\": \"2025-09-02 23:00:01\",\n    \"capacity\": 1,\n    \"status\": \"published\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/events/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"events",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update events",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyYjQ2MjNmOC1lNmQ5LTRmODAtOWRiNC1mMWY5NmM1MGFiZjkiLCJleHAiOjE3NTY5NTUxMDF9.SdxDAPue2MsE6IQlZbbmHrMsQ9hdMZpw5Z9wa-PhR4I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"evento uno\",\n    \"capacity\":22,\n    \"status\": \"published\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/events/6aaa7ef3-ac12-48c5-9326-904d4dc2a393/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"events",
+								"6aaa7ef3-ac12-48c5-9326-904d4dc2a393",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete event",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyYjQ2MjNmOC1lNmQ5LTRmODAtOWRiNC1mMWY5NmM1MGFiZjkiLCJleHAiOjE3NTY5NTUxMDF9.SdxDAPue2MsE6IQlZbbmHrMsQ9hdMZpw5Z9wa-PhR4I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/events/6aaa7ef3-ac12-48c5-9326-904d4dc2a393/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"events",
+								"6aaa7ef3-ac12-48c5-9326-904d4dc2a393",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancel event",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyYjQ2MjNmOC1lNmQ5LTRmODAtOWRiNC1mMWY5NmM1MGFiZjkiLCJleHAiOjE3NTY5NTUxMDF9.SdxDAPue2MsE6IQlZbbmHrMsQ9hdMZpw5Z9wa-PhR4I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/events/6aaa7ef3-ac12-48c5-9326-904d4dc2a393/cancel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"events",
+								"6aaa7ef3-ac12-48c5-9326-904d4dc2a393",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@example.com\",\n    \"password\": \"admin123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Jimmy\",\n    \"last_name\": \"Martinez\",\n    \"email\": \"jimmdy@example.com\",\n    \"password\": \"sdSDs@##$%\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all users",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyYjQ2MjNmOC1lNmQ5LTRmODAtOWRiNC1mMWY5NmM1MGFiZjkiLCJleHAiOjE3NTY5NjMwNzZ9.iAyZQHGK8mZJTqbmv_JtBbeaxuwmEHH0pk31f5zw1K4"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create user",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyYjQ2MjNmOC1lNmQ5LTRmODAtOWRiNC1mMWY5NmM1MGFiZjkiLCJleHAiOjE3NTY5NjMwNzZ9.iAyZQHGK8mZJTqbmv_JtBbeaxuwmEHH0pk31f5zw1K4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"newuser@example.com\",\n    \"first_name\": \"New\",\n    \"last_name\": \"User\",\n    \"password\": \"password123\",\n    \"role_id\": \"285bbb1f-a75a-4a8b-b86c-9c8fe72ef678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyYjQ2MjNmOC1lNmQ5LTRmODAtOWRiNC1mMWY5NmM1MGFiZjkiLCJleHAiOjE3NTY5NjMwNzZ9.iAyZQHGK8mZJTqbmv_JtBbeaxuwmEHH0pk31f5zw1K4"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"newuser@example.com\",\n    \"first_name\": \"New\",\n    \"last_name\": \"User\",\n    \"username\": \"newuser\",\n    \"password\": \"password123\",\n    \"role_id\": \"285bbb1f-a75a-4a8b-b86c-9c8fe72ef678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/users/aac440c7-19b1-4b44-9ec8-ba4b9f2064d3/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"aac440c7-19b1-4b44-9ec8-ba4b9f2064d3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user by id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyYjQ2MjNmOC1lNmQ5LTRmODAtOWRiNC1mMWY5NmM1MGFiZjkiLCJleHAiOjE3NTY5NjMwNzZ9.iAyZQHGK8mZJTqbmv_JtBbeaxuwmEHH0pk31f5zw1K4"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Newa\",\n    \"last_name\": \"Useraa\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/users/8eddd46e-854a-43b4-aeb1-e01886f6007f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"8eddd46e-854a-43b4-aeb1-e01886f6007f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyYjQ2MjNmOC1lNmQ5LTRmODAtOWRiNC1mMWY5NmM1MGFiZjkiLCJleHAiOjE3NTY5NjMwNzZ9.iAyZQHGK8mZJTqbmv_JtBbeaxuwmEHH0pk31f5zw1K4"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Newa\",\n    \"last_name\": \"Useraa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/users/aac440c7-19b1-4b44-9ec8-ba4b9f2064d3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"aac440c7-19b1-4b44-9ec8-ba4b9f2064d3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sessions",
+			"item": [
+				{
+					"name": "create sessions",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyYjQ2MjNmOC1lNmQ5LTRmODAtOWRiNC1mMWY5NmM1MGFiZjkiLCJleHAiOjE3NTY5NTg1MDR9.w6Q9dePKKfa7S5vHKH1yt2ols2xYm16vyVuQX8r8oa0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"event_id\": \"7de239fd-bb9f-4bf4-bf01-b6cc3896067a\",\n  \"title\": \"Introducción a FastAPI\",\n  \"description\": \"Sesión introductoria sobre FastAPI y SQLModel\",\n  \"start_time\": \"2025-09-02 11:00:00\",\n  \"end_time\": \"2025-09-02 12:30:00\",\n  \"capacity\": 1,\n  \"speaker\": \"aaa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/events/sessions/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"events",
+								"sessions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list sessions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyYjQ2MjNmOC1lNmQ5LTRmODAtOWRiNC1mMWY5NmM1MGFiZjkiLCJleHAiOjE3NTY5NTg1MDR9.w6Q9dePKKfa7S5vHKH1yt2ols2xYm16vyVuQX8r8oa0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/events/sessions/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"events",
+								"sessions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete session",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer TU_TOKEN_AQUI"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/events/sessions/1595251d-f8bb-47ab-a265-ee2c962d5715",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"events",
+								"sessions",
+								"1595251d-f8bb-47ab-a265-ee2c962d5715"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update session",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer TU_TOKEN_AQUI"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"event_id\": \"7109277b-9fbd-4d56-ab68-67a113716e4f\",\n  \"title\": \"Introducción a FastAPI\",\n  \"description\": \"Sesión introductoria sobre FastAPI y SQLModel\",\n  \"start_time\": \"2025-09-02 11:00:00\",\n  \"end_time\": \"2025-09-02 12:30:00\",\n  \"capacity\": 1500,\n  \"speaker\": \"aaa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/events/sessions/1595251d-f8bb-47ab-a265-ee2c962d5715",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"events",
+								"sessions",
+								"1595251d-f8bb-47ab-a265-ee2c962d5715"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Registrations",
+			"item": [
+				{
+					"name": "registrations",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyYjQ2MjNmOC1lNmQ5LTRmODAtOWRiNC1mMWY5NmM1MGFiZjkiLCJleHAiOjE3NTY5NTg1MDR9.w6Q9dePKKfa7S5vHKH1yt2ols2xYm16vyVuQX8r8oa0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"event_id\": \"6aaa7ef3-ac12-48c5-9326-904d4dc2a393\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/registrations/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"registrations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my_registrations",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyYjQ2MjNmOC1lNmQ5LTRmODAtOWRiNC1mMWY5NmM1MGFiZjkiLCJleHAiOjE3NTY5NDc3MTV9.rYy6DK7e5m2Y01dCZMGBw8xu95eq5B0aSlTVjSfAnTI"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"nodd\",\n    \"description\": \"esto es una prueba\",\n    \"start_date\": \"2025-09-02\",\n    \"end_date\": \"2025-09-02\",\n    \"capacity\": 1,\n    \"event_id\": \"6aaa7ef3-ac12-48c5-9326-904d4dc2a393\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/registrations/my_registrations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"registrations",
+								"my_registrations"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
