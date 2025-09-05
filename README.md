@@ -14,6 +14,7 @@ Este proyecto es el backend de una aplicacion de gestion de eventos, construido 
 - Pytest (testing)
 - pytest-cov (cobertura de tests)
 - Docker / Docker Compose
+- Swagger (Documntacion API)
 
 ## Instalacion
 
@@ -83,6 +84,17 @@ O usando Docker Compose:
 ```bash
 docker-compose up --build
 ```
+
+## Documentacion
+
+Este proyecto cuenta con documentación automática de la API generada con Swagger.
+
+Acceso a Swagger UI
+
+```bash
+http://localhost:8000/docs/
+```
+
 ## Test
 
 Ejecutar tests y generar reporte de cobertura:
