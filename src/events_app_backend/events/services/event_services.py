@@ -1,5 +1,4 @@
-
-
+from datetime import datetime
 import uuid
 from uuid import UUID
 from sqlalchemy import or_
@@ -33,6 +32,9 @@ def validate_total_capacity(db: Session, event_id: uuid.UUID, new_capacity: int,
 def create_event_service(db: Session, data, user_id: str) -> Event:
     start, end = normalize_event_dates(data.start_date, data.end_date)
 
+    now = datetime.now()
+    if start < now:
+        raise HTTPException(status_code=400, detail="Start date cannot be in the past")
     if end < start:
         raise HTTPException(status_code=400, detail="End date must be after start date")
     event = Event(**data.dict(), created_by=user_id)
@@ -53,6 +55,10 @@ def update_event_service(db: Session, event_id: UUID, update_data: dict):
 
     start, end = normalize_event_dates(start, end)
 
+    now = datetime.now()
+    
+    if start < now:
+        raise HTTPException(status_code=400, detail="Start date cannot be in the past")
     if end < start:
         raise HTTPException(status_code=400, detail="End date must be after start date")
 
